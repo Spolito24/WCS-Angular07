@@ -1,0 +1,42 @@
+<fieldset>
+  <h3>Developer form</h3>
+  <form (ngSubmit)="onSubmit">
+      <label for="firstname">Firstname : </label>
+      <input id="firstname" name="firstname" [(ngModel)]="developer.firstname" #firstname="ngModel" type="text" required>
+
+      <label for="lastname">Lastname : </label>
+      <input id="lastname" name="lastname" [(ngModel)]="developer.lastname" #lastname="ngModel" type="text" required>
+
+      <label for="age">Age : </label>
+      <input id="age" name="age" [(ngModel)]="developer.age" #age="ngModel" type="number" required>
+
+      <label for="bio">Bio : </label>
+      <input id="bio" name="bio" [(ngModel)]="developer.bio" #bio="ngModel" type="text" required>
+
+      <h3>Skills form</h3>
+
+      <label for="name">Skill name : </label>
+      <input id="name" name="name" [(ngModel)]="skill.name" #name="ngModel" type="text" required>
+
+      <label for="logo">Logo : </label>
+      <input id="logo" name="logo" [(ngModel)]="skill.logo" #logo="ngModel" type="url" required>
+
+      <label for="site">Site : </label>
+      <input id="site" name="site" [(ngModel)]="skill.site" #site="ngModel" type="url" required>
+
+      <button type="submit">Submit</button>
+  </form>
+</fieldset>
+
+<fieldset>
+  <h3>Name : {{developer.firstname}} {{developer.lastname}}</h3>
+  <p>Age : {{developer.age}} years old</p>
+  <p>Gender : {{developer.gender}} </p>
+  <p>Bio : {{developer.bio}}</p>
+</fieldset>
+
+<app-skill>
+  [name]="skill.name"
+  [logo]="skill.logo"
+  [site]="skill.site"
+</app-skill>
