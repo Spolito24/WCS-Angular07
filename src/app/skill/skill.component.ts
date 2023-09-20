@@ -7,13 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SkillComponent implements OnInit {
   @Input()
-  name: string = '';
+  name: string = 'PHP';
 
   @Input()
-  logo: string = '';
+  logo: string =
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png';
 
   @Input()
-  site: string = '';
+  site: string = 'https://www.php.net/';
 
   constructor() {}
 
